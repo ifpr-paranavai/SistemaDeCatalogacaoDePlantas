@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OrdemDaPlantaController;
 use Illuminate\Support\Facades\Route;
 
 /*
