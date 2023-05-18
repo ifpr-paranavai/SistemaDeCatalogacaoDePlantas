@@ -6,21 +6,21 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
+     /**
      * Run the migrations.
      */
     public function up()
     {
-        Schema::create('ordem_planta', function (Blueprint $table) {
+        Schema::create('ordem_plantas', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
-            $table->text('descrição')->nullable();
+            $table->text('descricao')->nullable();
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('ordem_planta');
+        Schema::dropIfExists('ordem_plantas');
     }
 };

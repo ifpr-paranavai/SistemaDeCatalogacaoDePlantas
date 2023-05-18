@@ -4,7 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\OrdemPlanta;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Support\Facades\DB;
 use Tests\TestCase;
 
 class OrdemDaPlantaTest extends TestCase
@@ -42,9 +42,9 @@ class OrdemDaPlantaTest extends TestCase
     public function testExcluirOrdemPlanta()
     {
         $ordemPlanta = OrdemPlanta::factory()->create();
+        $response = $this->delete('/api/ordens-plantas/' . $ordemPlanta->id);
 
-        $ordemPlanta->delete();
-
-        $this->assertDeleted($ordemPlanta);
+        $this->assertDatabaseMissing('ordem_plantas', ['id' => $ordemPlanta->id]);
+        $response->assertNoContent();
     }
 }
