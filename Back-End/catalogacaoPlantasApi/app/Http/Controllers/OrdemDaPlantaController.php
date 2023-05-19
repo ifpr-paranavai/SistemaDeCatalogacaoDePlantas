@@ -7,9 +7,6 @@ use Illuminate\Http\Request;
 
 class OrdemDaPlantaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         $ordensPlantas = OrdemPlanta::all();

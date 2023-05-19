@@ -28,13 +28,4 @@
         <env name="SESSION_DRIVER" value="array"/>
         <env name="TELESCOPE_ENABLED" value="false"/>
     </php>
-
-        <!-- <listeners>
-        <listener class="Jeffreyvanrossum\PHPUnitResultPrinter\Printer">
-            <arguments>
-                <boolean>true</boolean>
-                <boolean>true</boolean>
-            </arguments>
-        </listener>
-    </listeners> -->
 </phpunit>

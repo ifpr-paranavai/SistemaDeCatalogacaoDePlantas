@@ -15,6 +15,7 @@ return new class extends Migration
             $table->increments('id');
             $table->string('nome');
             $table->text('descricao')->nullable();
+            $table->unsignedBigInteger('ordem_id');
             $table->timestamps();
         });
     }
